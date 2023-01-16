@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:  #AC4425;
+    font-family: 'Lato', sans-serif;
+    margin:0;
+}
+
+/*awal header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #002B5B;
+    height: 90px;
+}
+
+web-name {
+    font-size: 18px;
+    margin: .2rem;
+    color: whitesmoke;
+    margin-left: 10px;
+}
+
+.search-movies{
+    background-color: transparent;
+    margin-right: 10px;
+    border: 2px solid #100720;
+    padding: 0.9rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #fff;
+    font-family: inherit
+}
+/*akhir header*/
+
+/*awal banner*/
+.banner{
+    position: relative;
+    background: url(/avenger.jpg) no-repeat center;
+    background-size: cover;
+    height: 600px;
+    overflow: hidden;
+    opacity: 0.7;
+    display: flex;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Merriweather', serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Vollkorn', serif;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(217, 206, 63);
+    font-weight: 700 bold;
+    text-transform: uppercase;
+}
+
+.container h1{
+    margin: 0;
+    font-size: 100px;
+}
+
+.container h1 span {
+    padding: 6px 14px;
+    display: inline-block;
+}
+
+.cen {
+    margin:20px;
+    display: block;
+    font-size: 55px;
+}
+/*akhir banner*/
+
+/*awal main*/
+main{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    width:350px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.5px 4px 5px rgba(0,0,0,1);
+    background-color: #DFD3C3;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    margin-top: 0px;
+}
+
+.movie-info span{
+    background-color: #16213E;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.movie-info span.rating{
+    color : whitesmoke;
+}
+
+.overview{
+    position: absolute;
+    left:0px;
+    bottom:0px;
+    right:0px;
+    background-color:#DFD3C3;
+    padding: 1rem;
+    max-height: 100%;
+    transform:translateY(101%);
+    transition:transform 0.5s ease-in-out;
+}
+
+.movie:hover .overview{
+    transform:translateY(0%);
+}
+
+/* genre */
+#genre-tag{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+    align-items: center;
+    margin: 12px auto;
+}
+
+.container-tag {
+    background : #D07000;
+    border: 5px solid black
+}
+
+.tag{
+    color: white;
+    background-color: #A62349;
+    padding: 10px 22px;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.tag.highlight{
+    background-color: #533483;
+}
+/* akhir tag*/
+
+/*footer*/
+footer {
+    background: rgb(32, 83, 117);
+    margin-top: 40px;
+    padding: 20px;
+ }
+ footer p{
+    color: whitesmoke;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+ }
+
+ /*media queries*/
+ @media (max-width: 500px){
+    html{
+        width: 100%;
+    }
+    .banner{
+        width: 100%;
+    }
+    
+    .form-movies.active{
+        display: flex;
+    }
+
+    .search-movies {
+        height:50px;
+        width: 140px;
+        margin-left: 25px;
+    }
+
+    #genre-tag{
+        width: 80%;
+    }
+
+    main{
+        width: 100%;
+    }
+}
